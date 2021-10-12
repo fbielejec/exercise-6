@@ -16,6 +16,9 @@ check:
 test:
 	SKIP_WASM_BUILD= cargo test --all
 
+test-pallet:
+	SKIP_WASM_BUILD= cargo test -p pallet-kitties
+
 purge:
 	cargo run -- purge-chain --dev -y
 
